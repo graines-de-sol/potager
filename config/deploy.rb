@@ -5,7 +5,7 @@ set :deploy_to, "/home/potager"
 set :use_sudo, false
 set :scm, 'git'
 set :default_stage, 'development'
-set :branch, fetch(:branch, "production")
+set :branch, fetch(:branch, "master")
 
 role :web, "s15367251.onlinehome-server.info"
 role :app, "s15367251.onlinehome-server.info"
