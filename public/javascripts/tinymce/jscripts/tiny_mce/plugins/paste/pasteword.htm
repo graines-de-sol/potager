@@ -1,0 +1,98 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Ins&eacute;rer un texte cr&eacute;&eacute; avec Word</title>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/pasteword.js"></script>
+	<link href="css/pasteword.css" rel="stylesheet" type="text/css" />
+	<base target="_self" />
+	<style>
+	html {
+	  background-color:#fff;
+	}
+	body {
+	  background-color:#fff;
+	  width:500px;
+	  height:600px;
+    font-family:"Trebuchet ms",georgia !important;
+    font-size:12px !important;
+	}
+	.title {
+	  color:#2f2f2f;
+	  font-weight:normal;
+	  width:410px;
+	  height:30px;
+	  padding:10px;
+	  background-color:#fffaf0;
+	  margin-bottom:10px;
+	  border:1px solid #d4d4d4;
+	}
+	.mceActionPanel {
+	  width:430px;
+	  height:300px;
+	  overflow:auto;
+	}
+	#iframecontainer {
+	  width:430px;
+	  height:500px !important;
+	  overflow:auto !important;
+	  border:1px solid #d4d4d4;
+	}
+	#iframecontainer iframe {
+	  width:430px !important;
+	  height:auto !important;
+	  overflow:auto;
+	}
+  .button {
+    background: #ffa200 url('../../../../../../images/admin/button_bg.png') repeat-x !important;
+    background-color:#ffa200;
+    border:1px solid #ffa200;
+    color:#efefef;
+    padding:5px;
+    font-weight:normal !important;
+    height:30px !important;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:#d4d4d4 1px 1px 5px 1px;
+    -webkit-box-shadow:#d4d4d4 1px 1px 5px 1px;
+    box-shadow:#d4d4d4 1px 1px 5px 1px;
+  }
+  .button:hover {
+    background: #ffa200 url('../../../../../../images/admin/button_bg.png') repeat-x !important;
+    background-color:#ffa200;
+    border:1px solid #ffa200;
+    color:#fff;
+    padding:5px;
+    height:30px !important;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+  }
+	</style>
+</head>
+<body style="display:none; overflow:auto;background-color:#fff;width:100%;height:100%;">
+	<form name="source" onsubmit="saveContent();" action="#">
+		<div class="title">
+		  <strong>Ins&eacute;rer un texte cr&eacute;&eacute; avec Word</strong>
+		  <br />
+		  Copier/coller votre texte dans le cadre ci-dessous
+		</div>
+
+		<div id="iframecontainer" style='width:430px'></div>
+
+		<div class="mceActionPanel">
+			<div style="float: left">
+				<input type="button" id="insert" name="insert" value="Ins&eacute;rer" onclick="saveContent();" class='button' />
+			</div>
+
+			<div style="float: right">
+				<input type="button" id="cancel" name="cancel" value="Annuler" onclick="tinyMCEPopup.close();" class='button' />
+			</div>
+		</div>
+	</form>
+</body>
+</html>

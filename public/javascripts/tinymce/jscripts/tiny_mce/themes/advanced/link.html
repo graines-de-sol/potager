@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Cr&eacute;er un lien</title>
+
+  <script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+  <script type="text/javascript" src="../../utils/form_utils.js"></script>
+  <script type="text/javascript" src="../../utils/validate.js"></script>
+  <script type="text/javascript" src="js/link.js"></script>
+
+  <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+
+  <base target="_self" />
+
+  <style>
+    html {
+      background-color:#fff;
+    }
+
+    body {
+      background-color:#fff;
+      width:480px;
+      height:100%;
+      padding:5px;
+    }
+    * {
+      color:#2f2f2f;
+      font-family:"Trebuchet ms",georgia !important;
+      font-size:12px !important;
+    }
+    .button {
+      background: #ffa200 url('../../../../../../images/admin/button_bg.png') repeat-x !important;
+      background-color:#ffa200;
+      border:1px solid #ffa200;
+      color:#efefef;
+      padding:5px;
+      height:30px !important;
+      -moz-border-radius:3px;
+      -webkit-border-radius:3px;
+      border-radius:3px;
+      -moz-box-shadow:#d4d4d4 1px 1px 5px 1px;
+      -webkit-box-shadow:#d4d4d4 1px 1px 5px 1px;
+      box-shadow:#d4d4d4 1px 1px 5px 1px;
+    }
+    .button:hover {
+      background: #ffa200 url('../../../../../../images/admin/button_bg.png') repeat-x !important;
+      background-color:#ffa200;
+      border:1px solid #ffa200;
+      color:#fff;
+      padding:5px;
+      height:30px !important;
+      -moz-border-radius:3px;
+      -webkit-border-radius:3px;
+      border-radius:3px;
+      -moz-box-shadow:none;
+      -webkit-box-shadow:none;
+      box-shadow:none;
+    }
+    .target_block {
+      width:460px;
+      padding:10px;
+      background-color:#fffaf0;
+      text-align:left;
+      border:1px solid #d4d4d4;
+      margin-top:10px;
+    }
+    ul {
+      list-style-type:none;
+    }
+    span, label, p {
+      font-weight:bold !important;
+    }
+  </style>
+
+</head>
+
+<body id="link">
+  <form action="#" id='link_form'>
+
+    <div class="target_block" id="external">
+      <strong>Copiez/collez l'adresse de la page vers laquelle pointe le lien : </strong>
+      <br />
+      <span style="display:none;" id="hrefbrowsercontainer">&nbsp;</span>
+      <input style="height:20px;font-size:14px;width:420px;" id="href" name="href" type="text" class="mceFocus" value="" onchange="LinkDialog.checkPrefix(this);" />
+      <br />
+      <br />
+      <input type="button" style="margin-left:320px;" name="valid_link" class="button" value="Enregistrer" onclick="LinkDialog.update();"/>
+      <br style="clear:both;"></div>
+    </div>
+
+    <div class="panel_wrapper"  style="display:none;">
+        <div id="general_panel" class="panel current">
+
+        <table border="0" cellpadding="4" cellspacing="0">
+          <tr>
+            <td nowrap="nowrap"><label for="href">Cible</label></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><label for="link_list">{#advanced_dlg.link_list}</label></td>
+            <td><select id="link_list" name="link_list" onchange="document.getElementById('href').value=this.options[this.selectedIndex].value;"></select></td>
+          </tr>
+        <tr>
+            <td><label id="targetlistlabel" for="targetlist">{#advanced_dlg.link_target}</label></td>
+            <td><select id="target_list" name="target_list"></select></td>
+        </tr>
+          <tr>
+            <td nowrap="nowrap"><label for="linktitle">{#advanced_dlg.link_titlefield}</label></td>
+            <td><input id="linktitle" name="linktitle" type="text" value="" style="width: 200px" /></td>
+          </tr>
+            <tr>
+                <td><label for="class_list">{#class_name}</label></td>
+                <td><select id="class_list" name="class_list"></select></td>
+            </tr>
+        </table>
+        </div>
+    </div>
+
+</form>
+</body>
+</html>
+

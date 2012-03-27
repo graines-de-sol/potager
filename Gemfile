@@ -24,16 +24,22 @@ gem 'jquery-rails'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.10'
 gem 'attribute_normalizer'
+gem 'simple_form'
+gem 'acts_as_tree_rails3'
+gem 'birthday', '~> 0.2.0'
 
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
-  gem 'rspec-rails'
 end
 
-group :development do
-  gem "rails_best_practices"
-  gem "ripper"
+#group :development do
+#  gem "rails_best_practices"
+#  gem "ripper"
+#  gem "flay"
+#  gem "flog"
+#  gem "excellent"
+#  gem "brakeman"
   gem 'rspec-rails'
-end
+#end
 
